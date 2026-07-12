@@ -1,0 +1,84 @@
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    background: radial-gradient(circle at 20% 20%, #111827, #05070d);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* subtle grid */
+.grid-bg {
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+    opacity: 0.4;
+    transform: translateZ(0);
+}
+
+/* typography */
+.hero-content {
+    position: relative;
+    text-align: center;
+    max-width: 900px;
+    padding: 0 24px;
+}
+
+.hero-title {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    font-weight: 700;
+    color: white;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+}
+
+.word {
+    display: inline-block;
+    margin-right: 0.4em;
+    will-change: transform, opacity;
+}
+
+/* subtitle */
+.hero-subtitle {
+    margin-top: 20px;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* CTA */
+.hero-cta {
+    margin-top: 32px;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.btn {
+    padding: 12px 20px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn.primary {
+    background: white;
+    color: black;
+}
+
+.btn.secondary {
+    background: transparent;
+    color: white;
+}
+
+/* hover interaction */
+.btn:hover {
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.08);
+}
